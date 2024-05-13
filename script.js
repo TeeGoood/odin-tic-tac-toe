@@ -85,9 +85,6 @@ function GameController(player1Name = "player1", player2Name = "player2") {
     if (boardObject.getBoard()[x][y] != "") return;
     boardObject.markBoard(x, y, getActivePlayer().mark);
     round++;
-    /* boardObject.printBoard();
-    console.log(`round: ${round}`);
-    console.log(`winner: ${getWinner()}`); */
   }
 
   function restartGame() {
@@ -104,7 +101,7 @@ function GameController(player1Name = "player1", player2Name = "player2") {
 }
 
 function screenController() {
-  const gameController = GameController("tee", "tingting");
+  const gameController = GameController();
   const boardDiv = document.querySelector(".board");
   const statusHeader = document.querySelector(".status");
 
